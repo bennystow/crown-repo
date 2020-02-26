@@ -11,6 +11,11 @@
     background-size: cover;
     background-position: center;
     margin-bottom: 5px;
+    transition: opacity 0.5s ease-in-out;
+
+    &:hover {
+      opacity: 80%;
+    }
   }
 
   .collection-footer {
