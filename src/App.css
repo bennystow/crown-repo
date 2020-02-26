@@ -5,9 +5,4 @@ body {
 a {
   text-decoration: none;
   color: #333;
-  transition: text-decoration 1s ease-in;
-}
-
-a:hover {
-  text-decoration: underline;
 }
