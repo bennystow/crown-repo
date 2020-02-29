@@ -13,7 +13,7 @@ class SignIn extends React.Component {
 
     this.state = {
       email: '',
-      password: ''
+      password: '',
     };
   }
 
@@ -31,22 +31,31 @@ class SignIn extends React.Component {
 
   render() {
     return (
-      <div className='sign-in'>
+      <div className="sign-in">
         <h2>I already have an account</h2>
         <span>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubmit}>
-          <FormInput name='email' type='email' handleChange={this.handleChange} value={this.state.email} label='email' required />
           <FormInput
-            name='password'
-            type='password'
-            value={this.state.password}
+            name="email"
+            type="email"
+            autoComplete="off"
             handleChange={this.handleChange}
-            label='password'
+            value={this.state.email}
+            label="email"
             required
           />
-          <div className='button-container'>
-            <CustomButton type='submit'> Sign in </CustomButton>
+          <FormInput
+            name="password"
+            type="password"
+            value={this.state.password}
+            handleChange={this.handleChange}
+            label="password"
+            autoComplete="current-password"
+            required
+          />
+          <div className="button-container">
+            <CustomButton type="submit"> Sign in </CustomButton>
             <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
               SIGN IN WITH GOOGLE
             </CustomButton>

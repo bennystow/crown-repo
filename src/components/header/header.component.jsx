@@ -19,12 +19,17 @@ const Header = ({ currentUser }) => (
       <Link className='option' to='/contact'>
         CONTACT
       </Link>
-      {/*} <Link className='option' to='/signin'>
-      //   SIGN IN
-// </Link>*/}
       {currentUser ? (
-        <div className='option' onClick={() => auth.signOut()}>
-          SIGN OUT
+        <div className='sign-out-container'>
+          <div className='option' onClick={() => auth.signOut()}>
+            SIGN OUT
+          </div>
+          <div
+            className='option google-user-img'
+            style={{
+              backgroundImage: `url(${currentUser.photoURL})`
+            }}
+          />
         </div>
       ) : (
         <Link className='option' to='/signin'>
