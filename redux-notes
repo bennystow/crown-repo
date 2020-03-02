@@ -1,0 +1,19 @@
+root reducer
+> import { combineReducers } from 'redux';
+
+specific reducer
+> state
+> action
+> action.payload
+
+store
+> import { createStore, applyMiddleware } from 'redux'
+> import logger from 'redux-logger'
+> set const middlewares = [logger]
+> const store = createStore(rootReducer, applyMiddleware(...middlewares));
+> export default store
+
+component
+> import { connect } from 'react'redux'
+> const mapStateToProps 
+> export default connect(mapStateToProps)(ComponentName)
